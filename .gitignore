@@ -1,0 +1,10 @@
+# IntellIJ Idea
+clankipediabot.iml
+.idea
+
+# Gradle
+.gradle
+build
+
+#Testing
+config.toml

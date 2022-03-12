@@ -1,0 +1,10 @@
+query GroupsQuery($id: Int!) {
+    groups {
+        single(id: $id) {
+            name,
+            users {
+                name
+            }
+        }
+    }
+}

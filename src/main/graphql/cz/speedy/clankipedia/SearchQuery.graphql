@@ -1,0 +1,12 @@
+query SearchQuery($query: String!) {
+    pages {
+        search(query: $query) {
+            results {
+                title,
+                path,
+                description
+            },
+            totalHits
+        }
+    }
+}

@@ -1,0 +1,9 @@
+query PagesQuery {
+    pages {
+        list {
+            title,
+            path,
+            description
+        }
+    }
+}

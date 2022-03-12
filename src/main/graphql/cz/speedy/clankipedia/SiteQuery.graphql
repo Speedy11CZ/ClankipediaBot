@@ -1,0 +1,10 @@
+query SiteQuery {
+    site {
+        config {
+            host,
+            title,
+            description,
+            logoUrl
+        }
+    }
+}
