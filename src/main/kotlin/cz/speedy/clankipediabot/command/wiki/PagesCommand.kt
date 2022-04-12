@@ -27,7 +27,7 @@ class PagesCommand(private val api: ApolloClient, private val rootUrl: String): 
 
                 description += "- [${result.title}](${rootUrl}/${result.path}) - $pageDescription\n"
             }
-            event.hook.setEphemeral(false).sendMessageEmbeds(EmbedBuilder().setColor(Constants.PRIMARY_COLOR).setTitle("Pages").addField("Result", description, false).build()).queue()
+            event.hook.setEphemeral(false).sendMessageEmbeds(EmbedBuilder().setColor(Constants.PRIMARY_COLOR).setTitle("Pages").setDescription(description,).build()).queue()
         }
     }
 }
