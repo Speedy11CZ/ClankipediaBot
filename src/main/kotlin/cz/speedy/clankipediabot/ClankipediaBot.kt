@@ -42,5 +42,5 @@ fun main() {
 
     jda.addEventListener(CommandListener(commandHandler))
 
-    logger.info("ClankipediaBot initialization completed")
+    logger.info("ClankipediaBot initialization completed (${jda.guilds.size} guilds)")
 }
