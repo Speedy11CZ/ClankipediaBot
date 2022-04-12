@@ -24,7 +24,7 @@ class SearchCommand(private val api: ApolloClient, private val rootUrl: String):
         runBlocking {
             val response: ApolloResponse<SearchQuery.Data> = api.query(SearchQuery(query)).execute()
             if(response.data?.pages?.search?.totalHits!! < 1) {
-                event.hook.setEphemeral(false).sendMessageEmbeds(EmbedBuilder().setColor(Color.RED).setTitle("No match").setDescription("No match found on the wiki").build()).queue()
+                event.hook.setEphemeral(false).sendMessageEmbeds(EmbedBuilder().setColor(Color.RED).setTitle("No match").setDescription("No match found on the wiki").addField("Query", query, false).build()).queue()
                 return@runBlocking
             }
 
